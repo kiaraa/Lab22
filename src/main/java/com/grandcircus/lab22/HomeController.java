@@ -16,10 +16,13 @@ public class HomeController {
 	}
 	
 	@RequestMapping("/addUser")
-	public ModelAndView makeUser(@RequestParam("fName") String fName, @RequestParam("lName") String lName, @RequestParam("birthday") String birthday) {
+	public ModelAndView makeUser(@RequestParam("fName") String fName, @RequestParam("lName") String lName, @RequestParam("birthday") String birthday, @RequestParam("phone") String phone,
+			@RequestParam("email") String email) {
 		newUser.setfName(fName);
 		newUser.setlName(lName);
 		newUser.setBirthday(birthday);
+		newUser.setPhone(phone);
+		newUser.setEmail(email);
 		return new ModelAndView("thanks-page", "userInfo", newUser);
 	}
 

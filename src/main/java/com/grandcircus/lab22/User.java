@@ -6,7 +6,8 @@ public class User {
 	String fName;
 	String lName;
 	String birthday;
-	
+	String phone;
+	String email;
 	
 	
 	public User() {
@@ -14,11 +15,13 @@ public class User {
 		// TODO Auto-generated constructor stub
 	}
 
-	public User(String fName, String lName, String birthday) {
+	public User(String fName, String lName, String birthday, String phone, String email) {
 		super();
 		this.fName = fName;
 		this.lName = lName;
 		this.birthday = birthday;
+		this.phone = phone;
+		this.email = email;
 	}
 
 	public String getfName() {
@@ -45,5 +48,20 @@ public class User {
 		this.birthday = birthday;
 	}
 	
+	public String getPhone() {
+		return phone;
+	}
+
+	public void setPhone(String phone) {
+		this.phone = phone;
+	}
+	
+	public String getEmail() {
+		return email;
+	}
+
+	public void setEmail(String email) {
+		this.email = email;
+	}
 	
 }

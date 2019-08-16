@@ -5,6 +5,7 @@
 <head>
 <meta charset="UTF-8">
 <title>New User</title>
+<link rel="stylesheet" type="text/css" href="style.css">
 <link
 	href="https://stackpath.bootstrapcdn.com/bootswatch/4.3.1/united/bootstrap.min.css"
 	rel="stylesheet"
@@ -12,9 +13,8 @@
 	crossorigin="anonymous">
 </head>
 <body>
-	<div id="container" style="background-color: #666666; height: 1000px">
-		<div id="heading"
-			style='width: 100%; height: 100px; background-image: url("beans-brown-coffee-34085.jpg"); padding-left: 50px; color:white'>
+	<div id="container">
+		<div id="heading">
 			<br>
 			<h2>Grand Circus Coffee</h2>
 		</div>
@@ -22,8 +22,7 @@
 			<a class="navbar-brand" href="#">Thank You For Choosing Grand
 				Circus Coffee!</a>
 		</nav>
-		<div id="bodyText"
-			style="text-align: center; float: 20%; color: white">
+		<div id="bodyText">
 			<br>
 			<img src="gclogo.png"><br><br>
 			<div class="card text-white bg-primary mb-3"
@@ -34,11 +33,20 @@
 						below.</h4>
 					<p class="card-text"><form action="/addUser">
 						<input type="text" name="fName" class="form-control"
-							placeholder="First name" id="inputDefault" style="width: 200px"><br>
+							placeholder="First name" id="inputDefault" style="width: 200px" required><br>
+							
 				<input type="text" name="lName" class="form-control"
-							placeholder="Last name" id="inputDefault" style="width: 200px"><br>
+							placeholder="Last name" id="inputDefault" style="width: 200px" required><br>
+							
 				<input type="text" name="birthday" class="form-control"
-							placeholder="Birthday" id="inputDefault" style="width: 200px"><br>
+							placeholder="Birthday" id="inputDefault" style="width: 200px" pattern="\d{2}\/\d{2}\/\d{4}" required><br>
+							
+				<input type="text" name = "phone" class="form-control" placeholder="(xxx)-xxx-xxxx" 
+				id="inputDefault" style="width:200px" pattern="\(\d{3}\)-\d{3}-\d{4}" required><br>
+				
+				<input type="text" name="email" class="form-control" placeholder="email@example.com"
+				id="inputDefault" style="width:200px" pattern="[0-z]+@[0-z]{1,10}\.com" required><br>
+				
 				<input type="submit" value="Submit" class="btn btn-primary">
 			</form></p>
 					
