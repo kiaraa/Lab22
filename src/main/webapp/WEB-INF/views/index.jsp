@@ -31,6 +31,8 @@
 		</nav>
 		<div id="bodyText"><br>
 			<img src="gclogo.png">
+			<br>
+			<br>
 			<h1 style="color:white">Sleepy developers? We can help.</h1>
 			Please, we need coffee to survive.
 		</div>

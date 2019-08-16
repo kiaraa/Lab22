@@ -47,6 +47,8 @@
 				<input type="text" name="email" class="form-control" placeholder="email@example.com"
 				id="inputDefault" style="width:200px" pattern="[0-z]+@[0-z]{1,10}\.com" required><br>
 				
+				<input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password" name="password" style="width:200px" required>
+				
 				<input type="submit" value="Submit" class="btn btn-primary">
 			</form></p>
 					

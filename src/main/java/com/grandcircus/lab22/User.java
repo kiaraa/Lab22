@@ -8,6 +8,7 @@ public class User {
 	String birthday;
 	String phone;
 	String email;
+	String password;
 	
 	
 	public User() {
@@ -62,6 +63,14 @@ public class User {
 
 	public void setEmail(String email) {
 		this.email = email;
+	}
+	
+	public String getpassword() {
+		return password;
+	}
+
+	public void setpassword(String password) {
+		this.password = password;
 	}
 	
 }
