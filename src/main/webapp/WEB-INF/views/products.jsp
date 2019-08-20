@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -11,6 +12,7 @@
 	rel="stylesheet"
 	integrity="sha384-WTtvlZJeRyCiKUtbQ88X1x9uHmKi0eHCbQ8irbzqSLkE0DpAZuixT5yFvgX0CjIu"
 	crossorigin="anonymous">
+
 </head>
 <body>
 	<div id="container">
@@ -39,14 +41,41 @@
 				</ul>
 			</div>
 		</nav>
-		<div id="bodyText"><br>
+		<div id="blurb-and-logo" align="center">
 			<img src="gclogo.png">
-			<br>
-			<br>
-			<h1 style="color:white">Sleepy developers? We can help.</h1>
-			Please, we need coffee to survive.
+			<h1 style="color: white">Products</h1>
+			<p style="color: white">
+				Here are our excellent products, curated from around the world.
+				Everything is fair trade.<br>
+			<form name="searchForm" action="/search">
+				<input type="text" name="search"
+					placeholder="Search by name or category" class="form-control"
+					style="width: 20%"><br> <input type="submit"
+					value="Search" class="btn btn-primary">
+			</form>
+			</p>
 		</div>
-	</div>
-
+		<div id="tbl-content" align="center">
+			<table class="table table-hover">
+				<thead class="table-primary">
+					<tr class="table-primary" scope="row">
+						<th>Name</th>
+						<th>Category</th>
+						<th>Description</th>
+						<th>Price</th>
+					</tr>
+				</thead>
+				<tbody>
+					<c:forEach var="p" items="${prodsData }">
+						<tr class="table-primary">
+							<td>${p.name }</td>
+							<td>${p.category }</td>
+							<td>${p.description }</td>
+							<td>${p.price }</td>
+						</tr>
+					</c:forEach>
+				</tbody>
+			</table>
+		</div>
 </body>
 </html>
